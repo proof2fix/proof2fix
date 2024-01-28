@@ -18,7 +18,7 @@ feature
 				x1 := 0
 				x2 := n
 			-- invariant
-				-- valid_result: (x1 = x2 and x1 * x1 = n) or (x1 < x2 and x1 * x1 < n and x2 * x2 >= n)
+				-- valid_result: (x1 = x2 and x1 * x1 = n) or (x1 < x2 and x1 * x1 < n and x2 * x2 >= n) -- correction
 			until
 				x2 - x1 <= 1 or x1 = x2
 			loop

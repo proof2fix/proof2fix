@@ -25,7 +25,7 @@ feature -- Basic operations
 				max_so_far: across 1 |..| (i - 1) as c all a.sequence [c] <= Result end
 				result_in_array: across 1 |..| (i - 1) as c some a.sequence [c] = Result end
 			until
-				i = a.count
+				i = a.count -- correction: i = a.count + 1 or i > a.count
 			loop
 				if a [i] > Result then
 					Result := a [i]

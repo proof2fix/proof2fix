@@ -85,7 +85,7 @@ feature -- Basic operations
 			amount_not_negative: amount >= 0 and 0 >= credit_limit and 0 >= other.credit_limit
 			amount_available: amount <= available_amount
 			balance_non_negative: balance >= credit_limit and other.balance >= other.credit_limit
-			-- not_alias: Current /= other
+			-- correction: not_alias: Current /= other
 		do
 			withdraw (amount)
 			other.deposit (amount)

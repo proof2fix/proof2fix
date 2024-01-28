@@ -2,7 +2,7 @@ note
     description: "[
                     Failure 1: increase_minutes, postcondition hours_increased may be violated, 
 					           due to incorrect implementation of increase_minutes; 
-							   a call to increase_hour should be included in the else branch. 
+							   a call to increase_hour should be included in the else branch.
                    ]"
 	model: hours, minutes, seconds
 
@@ -100,7 +100,7 @@ feature -- Basic operations
 					--	increase_hours
 			else
 				set_minutes (0)
-					--	increase_hours
+					--	correction: increase_hours
 			end
 		ensure
 			hours_increased: old minutes = 59 implies hours = (old hours + 1) \\ 24

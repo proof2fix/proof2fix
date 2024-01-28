@@ -44,7 +44,7 @@ feature
 				end
 			else
 				is_on := False
-					-- previous_light_intensity := light_intensity
+					-- correction: previous_light_intensity := light_intensity
 				light_intensity := Zero_intensity
 			end
 		ensure

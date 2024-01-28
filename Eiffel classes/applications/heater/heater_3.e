@@ -57,7 +57,7 @@ feature
 			desired_temp_valid: desired_temp >= 10 and desired_temp <= 100
 		do
 			if is_on then
-				if temperature > desired_temp - deviation then
+				if temperature > desired_temp - deviation then -- correction: if temperature > desired_temp + deviation then
 					is_on := False
 				end
 			else

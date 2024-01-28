@@ -45,7 +45,7 @@ feature
 			else
 				is_on := False
 				light_intensity := Zero_intensity
-				previous_light_intensity := light_intensity
+				previous_light_intensity := light_intensity -- correction: switch the two instructions
 			end
 		ensure
 			turn_on_1: old (not is_on and previous_light_intensity > 0) implies (is_on and light_intensity = old previous_light_intensity)

@@ -74,7 +74,7 @@ feature -- Basic operations
 			balance := balance - amount
 		ensure
 			modify_field (["balance", "closed"], Current)
-			balance_set: balance = old balance + amount
+			balance_set: balance = old balance + amount -- correction: balance = old balance - amount
 			balance_decrease: balance <= old balance
 		end
 

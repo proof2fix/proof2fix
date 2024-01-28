@@ -81,7 +81,7 @@ feature -- Basic operations
 			explicit: wrapping
 
 		do
-			if hours = 24 then
+			if hours = 24 then -- correction hours = 23
 				set_hours (0)
 			else
 				set_hours (hours + 1)

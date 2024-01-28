@@ -13,7 +13,7 @@
 		</option>
 		<setting name="console_application" value="true"/>
 		<setting name="total_order_on_reals" value="false"/>
-		<library name="base" location="$AP\library\base\base-safe-scoop.ecf"/>
+		<library name="base" location="$AP\library\base\base-scoop-safe.ecf"/>
 		<library name="testing" location="$ISE_EIFFEL\library\testing\testing_ap.ecf"/>
 		<cluster name="square_root" location=".\" recursive="true"/>
 	</target>

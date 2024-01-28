@@ -64,7 +64,7 @@ feature
 				elseif light_intensity = Medium_intensity then
 					light_intensity := High_intensity
 				elseif light_intensity = High_intensity then
-					light_intensity := Medium_intensity
+					light_intensity := Medium_intensity -- correction: light_intensity :=  Low_intensity
 				end
 		ensure
 			from_low_to_medium: old light_intensity = Low_intensity implies light_intensity = Medium_intensity

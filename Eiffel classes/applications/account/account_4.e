@@ -59,7 +59,7 @@ feature -- Basic operations
 		require
 			amount_non_negative: amount >= 0
 		do
-			balance := balance - amount
+			balance := balance - amount -- correction: balance := balance + amount
 		ensure
 			modify_field (["balance", "closed"], Current)
 			balance_set: balance = old balance + amount

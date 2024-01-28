@@ -69,7 +69,7 @@ feature -- Basic operations
 			-- Withdraw `amount' from this account.
 		require
 			amount_not_negative: amount >= 0
-			-- amount_available: amount <= available_amount
+			-- correction: amount_available: amount <= available_amount
 		do
 			balance := balance - amount
 		ensure

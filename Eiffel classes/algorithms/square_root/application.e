@@ -13,6 +13,7 @@ create
 feature
     make
     local
+    	o0: SQUARE_ROOT
     	o1: SQUARE_ROOT_1; o2: SQUARE_ROOT_2
 		o3: SQUARE_ROOT_3; o4: SQUARE_ROOT_4;
      do

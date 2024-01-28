@@ -18,7 +18,7 @@ feature
 				x2 - x1 <= 1 or x1 = x2
 			loop
 				mid := (x1 + x2) // 2 -- integer division
-				if mid * mid /= n then
+				if mid * mid /= n then -- correction: if mid * mid = n then
 					x1 := mid
 					x2 := mid
 				else

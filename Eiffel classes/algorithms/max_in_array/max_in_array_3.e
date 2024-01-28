@@ -22,7 +22,7 @@ feature -- Basic operations
 			invariant
 				i_in_bounds: 2 <= i and i <= a.count + 1
 				max_so_far: across 1 |..| (i - 1) as c all a.sequence [c] <= Result end
-				-- result_in_array: across 1 |..| (i - 1) as c some a.sequence [c] = Result end
+				-- result_in_array: across 1 |..| (i - 1) as c some a.sequence [c] = Result end -- correction
 			until
 				i = a.count + 1
 			loop

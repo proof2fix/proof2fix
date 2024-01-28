@@ -56,7 +56,7 @@ feature -- Element change
 		do
 			minutes := a_value
 		ensure
-				-- minutes_set: minutes = a_value
+				-- correction: minutes_set: minutes = a_value
 			modify_model ("minutes", Current)
 		end
 

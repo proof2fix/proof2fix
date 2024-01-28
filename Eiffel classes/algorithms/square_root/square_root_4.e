@@ -27,7 +27,7 @@ feature
 					x1 := mid
 					x2 := mid
 				else
-					if mid * mid > n then
+					if mid * mid > n then -- correction: if mid * mid < n then
 						x1 := mid
 					else
 						x2 := mid

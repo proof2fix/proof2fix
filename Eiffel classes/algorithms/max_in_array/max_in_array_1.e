@@ -25,7 +25,7 @@ feature -- Basic operations
 			until
 				i = a.count + 1
 			loop
-				if a [i] < Result then
+				if a [i] < Result then -- correction: if a [i] < Result then
 					Result := a [i]
 				end
 				i := i + 1

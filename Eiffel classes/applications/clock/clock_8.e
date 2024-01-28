@@ -99,15 +99,15 @@ feature -- Basic operations
 			if minutes <= 59 then
 				set_minutes (minutes + 1)
 					--	set_minutes (0)
-					--	increase_hours
+					-- increase_hours
 			else
 				set_minutes (0)
 				increase_hours
 			end
 		ensure
-		    hours_increased: old minutes = 59 implies hours = (old hours + 1) \\ 24
+			hours_increased: old minutes = 59 implies hours = (old hours + 1) \\ 24
 			hours_unchanged: old minutes < 59 implies hours = old hours
-		    minutes_increased: minutes = (old minutes + 1) \\ 60
+			minutes_increased: minutes = (old minutes + 1) \\ 60
 			modify_model (["minutes", "hours"], Current)
 		end
 

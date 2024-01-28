@@ -1,7 +1,7 @@
 ﻿note
     description: "[
                     Failure 1: transfer, postcondition deposit_made may be violated, 
-                               due to the weakness of postcondition of deposit 
+                               due to the weakness of postcondition of deposit
                    ]"
 class
     ACCOUNT_7
@@ -60,7 +60,7 @@ feature -- Basic operations
 			balance := balance + amount
 		ensure
 			modify_field (["balance", "closed"], Current)
-			-- balance_set: balance = old balance + amount
+			-- correction: balance_set: balance = old balance + amount
 		end
 
 	withdraw (amount: INTEGER)

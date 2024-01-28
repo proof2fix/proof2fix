@@ -115,7 +115,7 @@ feature -- Basic operations
 			explicit: wrapping
 
 		do
-			if seconds > 59 then
+			if seconds > 59 then -- correction: if seconds >= 59 then
 				set_seconds (0)
 				increase_minutes
 			else

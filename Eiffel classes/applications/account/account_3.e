@@ -1,12 +1,13 @@
 ﻿note
-    description: "[
-                    Failure 1: transfer, precondition amount <= 10 may be violated on call to deposit.
-                   ]"
+	description: "[
+			Failure 1: transfer, precondition amount <= 10 may be violated on call to deposit.
+		]"
+
 class
-    ACCOUNT_3
+	ACCOUNT_3
 
 create
-    make
+	make
 
 feature {NONE} -- Initialization
 
@@ -55,8 +56,8 @@ feature -- Basic operations
 	deposit (amount: INTEGER)
 			-- Deposit `amount' in this account.
 		require
-			amount >= 0
-			amount <= 10
+			amount_non_neg: amount >= 0
+			amount_limit: amount <= 10
 		do
 			balance := balance + amount
 		ensure
@@ -86,6 +87,7 @@ feature -- Basic operations
 			amount_not_negative: amount >= 0
 			amount_available: amount <= available_amount
 			other /= Current
+			-- correction: amount <= 10
 		do
 			withdraw (amount)
 			other.deposit (amount)

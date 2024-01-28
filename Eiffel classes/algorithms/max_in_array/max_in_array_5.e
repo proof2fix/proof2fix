@@ -11,12 +11,12 @@ feature -- Basic operations
 		local
 			i: INTEGER
 		do
-			Result := 0 -- a [1]
+			Result := 0 -- correction: Result := a [1]
 			from
 				i := 2
 			invariant
 				i_in_bounds: 2 <= i and i <= a.count + 1
-				max_so_far: across 1 |..| (i - 1) as c all a.sequence [c] <= Result end
+				-- max_so_far: across 1 |..| (i - 1) as c all a.sequence [c] <= Result end
 				result_in_array: across 1 |..| (i - 1) as c some a.sequence [c] = Result end
 			until
 				i > a.count
@@ -29,7 +29,7 @@ feature -- Basic operations
 				a.count - i + 1
 			end
 		ensure
-			is_maximum: across 1 |..| a.count as c all a.sequence [c] <= Result end
+			-- is_maximum: across 1 |..| a.count as c all a.sequence [c] <= Result end
 			result_in_array: across 1 |..| a.count as c some a.sequence [c] = Result end
 		end
 

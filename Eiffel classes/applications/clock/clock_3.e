@@ -3,7 +3,7 @@ note
                     Failure 1: increase_minutes, postcondition hours_increased may be violated.
     				            the postcondition of increase_hours is too-weak to establish the postcondition of increase_miniute
 				   ]"
-                   
+
 	model: hours, minutes, seconds
 
 class
@@ -88,7 +88,7 @@ feature -- Basic operations
 				set_hours (hours + 1)
 			end
 		ensure
-				-- hours_increased: hours = (old hours + 1) \\ 24
+				-- correction: hours_increased: hours = (old hours + 1) \\ 24
 			modify_model ("hours", Current)
 		end
 

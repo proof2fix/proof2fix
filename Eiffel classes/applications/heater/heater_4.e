@@ -61,7 +61,7 @@ feature
 					is_on := False
 				end
 			else
-				if temperature < desired_temp + deviation then
+				if temperature < desired_temp + deviation then -- correction: if temperature < desired_temp - deviation then
 					is_on := True
 				end
 			end
